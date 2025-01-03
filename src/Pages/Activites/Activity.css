@@ -1,0 +1,36 @@
+.activityContainer {
+    padding: 0.5% 8%;
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 1%;
+    line-height: 2;
+    flex-wrap: wrap;
+
+    .activityItem {
+        width: 32%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        margin-top: 3%;
+        border-radius: 10px;
+
+        .image {
+            padding: 25% 0%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .activityNameAndDescription {
+            padding: 2%;
+
+            .activity {
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            .description {
+                /* font-size: 0.7rem; */
+            }
+        }
+    }
+}

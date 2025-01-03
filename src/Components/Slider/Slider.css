@@ -1,0 +1,127 @@
+.sliderContainer {
+    height: 80dvh;
+    /* display: flex;
+    align-items: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    justify-content: space-evenly;
+    height: inherit;
+    line-height: 2; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    /* margin: 0 auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(223, 208, 208);
+    background-blend-mode: multiply;
+
+    .tagLine {
+        font-size: 4em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .subTagline {
+        font-weight: 500;
+        font-size: 2em;
+    }
+}
+
+.leftNavigation,
+.rightNavigation {
+    font-size: 2rem;
+    width: 20%;
+}
+
+.slick-vertical .slick-slide {
+    border: 0px !important;
+}
+
+.slick-prev {
+    left: 35px !important;
+    z-index: 2;
+}
+
+.slick-next {
+    right: 35px !important;
+    z-index: 10;
+}
+
+.sliderText {
+    /* width: 100%; */
+    /* width: 50%;
+    line-height: 2.5;
+
+    text-align: left;
+    align-items: baseline; */
+}
+
+.slick-dots li button:before {
+    font-size: 0.8rem !important;
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.slick-dots li button:before {
+    color: white;
+}
+
+li.slick-active {
+    scale: 1.3;
+    filter: drop-shadow(1px 1px 7px var(--blue));
+    /* filter: drop-shadow(2px 4px 6px black); */
+    /* color: transparent !important; */
+}
+
+.sliderDot {
+    text-align: left !important;
+    left: 7% !important;
+    top: 80% !important;
+    width: 50% !important;
+}
+
+.sliderText1 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.sliderText2 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.sliderText3 {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.productImage {
+    width: 100%;
+    /* transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1); */
+    /* padding: 10%; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn1 {
+    background-color: #005e9e;
+    width: 20%;
+    text-align: center;
+    padding: 1% 1.2%;
+    border-radius: 20px;
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 2%;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    /* line-height: 2; */
+}

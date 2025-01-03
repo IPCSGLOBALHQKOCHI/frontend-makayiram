@@ -1,0 +1,239 @@
+.container {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+  /* overflow: hidden; */
+  border-radius: 20px !important;
+  /* width: 80vw !important; */
+  /* height: 90vh !important; */
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    width: 90vw;
+    height: 85vh;
+    top: 300px;
+  }
+}
+
+/* Small devices (e.g., phones ≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 85vw;
+    height: 88vh;
+    top: 350px;
+  }
+}
+
+/* Medium devices (e.g., tablets ≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 96vw !important;
+    height: 90vh;
+    top: 550px;
+    margin-bottom: 200px !important;
+    bottom: 200px !important;
+  }
+}
+
+/* Large devices (e.g., desktops ≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 90vw !important;
+    height: 80vh;
+    top: 650px;
+    box-shadow: 0 10px 10px 10px #dbdbdb;
+  }
+}
+
+/* Extra large devices (e.g., large desktops ≥1200px) */
+@media (min-width: 1200px) and (max-width: 1535.98px) {
+  .container {
+    width: 96vw !important;
+    height: 85vh;
+    top: 400px;
+    box-shadow: 0 15px 10px rgba(242, 240, 240, 0.921);
+
+  }
+}
+
+/* 2XL devices (≥1536px) */
+@media (min-width: 1536px) {
+  .container {
+    width: 80vw !important;
+    height: 90vh;
+    top: 400px;
+    box-shadow: 0 30px 50px #dbdbdb;
+  }
+}
+
+.container .slide .item {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 70%;
+  transform: translate(0, -50%);
+  /* box-shadow: 0 30px 60px #dfdfdf; */
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .item:nth-child(3) {
+  left: 57%;
+}
+.slide .item:nth-child(4) {
+  left: calc(57% + 220px);
+}
+.slide .item:nth-child(5) {
+  left: calc(57% + 440px);
+}
+
+.slide .item:nth-child(n + 6) {
+  left: calc(57% + 660px);
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+/* Extra small devices (e.g., phones <576px) */
+@media (max-width: 575.98px) {
+  .item .content {
+    left: 20px;
+    width: 280px;
+    font-size: 14px;
+    top: 70%;
+  }
+}
+
+/* Small devices (e.g., phones ≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .item .content {
+    left: 40px;
+    width: 320px;
+    font-size: 15px;
+  }
+}
+
+/* Medium devices (e.g., tablets ≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .item .content {
+    left: 60px;
+    width: 300px;
+    font-size: 16px;
+    top: 60%;
+  }
+}
+
+/* Large devices (e.g., desktops ≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .item .content {
+    left: 80px;
+    width: 400px;
+    font-size: 17px;
+    top: 55%;
+  }
+}
+
+/* Extra large devices (e.g., large desktops ≥1200px) */
+@media (min-width: 1200px) and (max-width: 1535.98px) {
+  .item .content {
+    left: 100px;
+    width: 500px;
+    font-size: 18px;
+    top: 50%;
+  }
+}
+
+/* 2XL devices (≥1536px) */
+@media (min-width: 1536px) {
+  .item .content {
+    left: 120px;
+    width: 500px;
+    font-size: 20px;
+    top: 50%;
+  }
+}
+
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+.content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+  margin-bottom: 20px;
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  opacity: 0;
+  font-weight: 400;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.content .button {
+  /* width: 100%; */
+  text-align: center;
+  position: absolute;
+  border: 2px solid white;
+  padding: 4px 30px;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 700;
+  transition: background-color 0.8s ease;
+}
+
+.content .button:hover {
+  background-color: white;
+  color: darkgreen;
+}

@@ -1,0 +1,98 @@
+.floraContainer {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bgImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.birdsButterflyImages {
+    background-image: url("../../assets/Flora/Ideopsis_vulgaris_(Blue_glassy_tiger).jpg");
+    height: 43dvh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 31%;
+    position: relative;
+
+    .imageName {
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        color: white;
+        width: 100%;
+        text-align: center;
+        /* font-weight: 700; */
+        font-size: 0.8rem;
+        padding: 2% 0%;
+    }
+}
+
+.natureImages {
+    background-position: bottom;
+    background-size: contain;
+    background-image: url("../../assets/activities/Shinrin.jpg");
+    height: 73dvh;
+
+}
+
+.floraImagesAndDescription {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    /* justify-content: space-between; */
+    padding: 2% 0%;
+    align-items: center;
+}
+
+.aboutBirdsAndButterflies {
+    line-height: 2;
+    width: 60%;
+}
+
+.subHeadFlora {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.imageGalleryFlora {
+    display: flex;
+    width: 100%;
+    margin-top: 4%;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .image {
+        height: 39dvh;
+        width: 23%;
+        position: relative;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+
+        .imageName {
+            position: absolute;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            width: 100%;
+            text-align: center;
+            /* font-weight: 700; */
+            font-size: 0.8rem;
+            padding: 2% 0%;
+
+        }
+    }
+
+
+}
+
+.Courtesy {
+    margin-top: 2%;
+    font-size: 0.9rem;
+    color: #006400;
+    font-weight: 600;
+}

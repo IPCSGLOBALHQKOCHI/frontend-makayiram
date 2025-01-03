@@ -1,0 +1,72 @@
+.slick-slider {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.productImage {
+    height: 200px;
+}
+
+.thumbContainer {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 2%; */
+}
+
+.thumb {
+    height: 10dvh;
+    /* gap: 1%; */
+    width: 96%;
+    margin: 0 auto;
+    border: 2px solid #006400;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+}
+
+.productImage {
+    height: 39dvh;
+}
+
+.imageGalleryContainer {
+    padding: var(--padding);
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    .galleryCol {
+        width: 32%;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding: 1%;
+        border-radius: 10px;
+        margin-top: 1%;
+
+        .cardTitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 2% 0%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .imageGalleryContainer {
+        flex-direction: column;
+        padding: 1% 2%;
+
+        .galleryCol {
+            width: 100%;
+            margin-top: 5%;
+
+            .productImage {
+                height: 30dvh;
+            }
+
+            .thumb {
+                height: 7dvh;
+            }
+        }
+    }
+}

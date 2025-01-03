@@ -1,0 +1,85 @@
+.footerContainer {
+    position: absolute;
+
+    width: 100%;
+    padding: 4% 3%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    .tripAdvisorIcon {
+        background-color: #00aa6c;
+    }
+
+    .brandName {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    .mainHead {
+        text-transform: uppercase;
+        margin-bottom: 3%;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .bookNow {
+        width: 32% !important;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        background-color: #006400;
+        color: white;
+        padding: 0% 0%;
+        width: 70%; 
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .bookNow {
+           width: 30%;
+        }
+    }
+
+
+    .menuItem {
+        font-size: 1.7rem;
+        font-weight: 200;
+
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        width: 23%;
+        line-height: 2;
+        text-align: left;
+
+        .tripAdvisor {
+            display: flex;
+            /* justify-content: space-between; */
+            gap: 8%;
+
+            /* font-size: 1.2rem; */
+
+            .tripAdvisorIcon {
+                font-size: 2rem;
+                width: 20%;
+                /* padding: 1%; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* flex-direction: column; */
+        }
+    }
+}

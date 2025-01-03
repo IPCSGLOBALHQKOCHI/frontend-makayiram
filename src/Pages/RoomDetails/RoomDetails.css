@@ -1,0 +1,199 @@
+.goBack {
+    position: fixed;
+    border: 1px solid white;
+    /* top: -1.5%; */
+    right: 2%;
+    bottom: 5%;
+    width: 2.5%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 2%;
+    z-index: 1000;
+    margin: 0 auto;
+    cursor: pointer;
+    background: #37561f;
+    color: white;
+    padding: 0.5%;
+    border-radius: 5px;
+}
+
+.roomDetailsParent {
+    position: relative;
+    margin-top: 2%;
+
+    .icon_container {
+        height: 15dvh;
+        margin-top: 2%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+
+}
+
+.list li {
+    min-height: 0;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    font-size: 0.7rem;
+}
+
+.hidden li {
+    min-height: 20px;
+    opacity: 1 !important;
+}
+
+.roomDetailsContainer {
+    /* padding: var(--padding); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1% 8%;
+    padding: 3% 0%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+
+
+    .slick-next {
+        right: 1%;
+    }
+
+    .slick-prev {
+        left: 2%;
+        z-index: 2;
+    }
+
+    .imageGallery {
+        width: 40%;
+        border-radius: 10px;
+
+        .galleryItem {
+            padding: 40% 0%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            background-position: center;
+            height: 100%;
+        }
+    }
+
+    .roomDetails {
+        width: 50%;
+
+        /* margin-top: 4%; */
+        .bathroom {
+
+            font-weight: 600;
+            color: #37561f;
+            font-size: 1.4rem;
+        }
+
+        .cancellation {
+            padding: 1%;
+            margin-top: 2%;
+            display: flex;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            justify-content: space-between;
+
+            .icon {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .policies {
+            /* transition: all 1s ease-in; */
+
+
+            .hidden {
+                /* opacity: 0; */
+                display: none;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        .roomName {
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .aminity {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2%;
+
+            .aminityItem {
+                /* width: 48%; */
+                flex-wrap: wrap;
+                display: flex;
+                flex-grow: 1;
+                flex-direction: row;
+                padding: 2%;
+                margin-top: 2%;
+                font-size: 1.5rem;
+                justify-content: space-evenly;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                border-radius: 5px;
+
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 1%;
+                }
+            }
+
+            /* .tarif {} */
+        }
+
+        .categorisation {
+            background-color: #37561f;
+            color: white;
+            padding: 1%;
+            margin-top: 2%;
+            /* border-radius: 10px; */
+            font-weight: 600;
+            text-align: center;
+            /* width: 70%; */
+        }
+
+        .description {
+            line-height: 2;
+            font-weight: 400;
+            padding: 1% 0%;
+        }
+
+        .checkAvailability {
+            .checkAvailabilityRoomDetails {
+                position: static;
+                width: 100%;
+                margin: 3% 0%;
+                font-size: 1.5rem;
+                line-height: 2;
+
+            }
+        }
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #777777;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}

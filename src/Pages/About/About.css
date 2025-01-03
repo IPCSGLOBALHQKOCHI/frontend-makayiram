@@ -1,0 +1,72 @@
+.aboutUsBanner {
+    padding: 5%;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    background-color: bisque;
+    background-blend-mode: multiply;
+
+    .head {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .taglin {
+        font-size: 2rem;
+
+    }
+}
+
+.aboutContainer,
+.floraContainer {
+    padding: var(--padding);
+    margin-top: 2%;
+    padding-bottom: 4%;
+    display: flex;
+    column-gap: 3%;
+    align-items: center;
+
+    /* justify-content: space-; */
+    .videoThumb {
+        width: 30%;
+        padding: 10%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 10px;
+    }
+
+    .aboutContent {
+        width: 100%;
+        font-size: 1rem;
+        color: rgb(119, 119, 119);
+        font-weight: 400;
+
+        .description {
+            line-height: 2;
+            font-size: 1.6rem;
+        color: rgb(116, 115, 115);
+        font-weight: 400;
+        text-align: justify;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .aboutUsBanner {
+        padding: 20% 0%;
+        /* margin-top: 14%; */
+
+        .head {
+            font-size: 2.2rem;
+        }
+
+        .taglin {
+            padding-top: 5%;
+            font-size: 1.3rem;
+        }
+    }
+}

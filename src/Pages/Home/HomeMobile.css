@@ -1,0 +1,432 @@
+@media screen and (max-width: 1000px) {
+    body {
+        --padding: 1% 5% !important;
+    }
+
+    .sliderContainer {
+        height: 100dvh;
+    }
+
+    #root {
+        padding-top: 0% !important;
+    }
+
+    .hidden li {
+        min-height: 45px !important;
+        opacity: 1 !important;
+    }
+
+    .roomDetailsParent {
+        margin-top: 18% !important;
+
+        .goBack {
+            z-index: 10;
+            position: absolute;
+            top: 33.5dvh !important;
+            width: 20% !important;
+            right: 5% !important;
+            font-size: 1.30em;
+            display: flex !important;
+            justify-content: center !important;
+            place-items: center;
+            column-gap: 4%;
+            cursor: pointer;
+        }
+    }
+
+    .rowReverse {
+        flex-direction: column !important;
+    }
+
+    .desktopOnly {
+        display: none !important;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+
+    .tagLine {
+        font-size: 3rem !important;
+        font-weight: 600;
+        padding: 20% 5%;
+        text-transform: uppercase;
+    }
+
+    .subTagline {
+        font-weight: 500;
+        font-size: 2rem !important;
+        padding: 5% !important;
+        /* display: none; */
+    }
+
+    .banner {
+        height: 100dvh;
+        /* padding: 0% 2%; */
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-wrap: balance;
+        text-align: center;
+
+        .bannerText {
+            display: flex;
+            flex-direction: column;
+            height: inherit;
+            row-gap: 3%;
+
+            .logo {
+                background-image: url(/src/assets/mlogo.png);
+                filter: drop-shadow(0px 0px 3px white);
+                /* padding: 25%; */
+                height: 27dvh;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+
+            }
+
+            .tagLine {
+                font-size: 3em;
+                font-weight: 600;
+                padding: 35% 2%;
+            }
+
+            .subTagline {
+                font-weight: 500;
+                font-size: 2rem;
+                padding: 5% 2% !important;
+                display: none;
+            }
+        }
+    }
+
+    .mobileCheckAvailability {
+        display: block;
+    }
+
+    .mobileMenuOpener {
+        position: fixed;
+        top: 2.5%;
+        right: 3%;
+        z-index: 30;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .black {
+        color: black;
+    }
+
+    .white {
+        color: white;
+    }
+
+    .checkAvailabilityInline {
+        position: static;
+        width: 100% !important;
+
+        .form {
+
+            /* padding: var(--padding); */
+            .date {
+                font-size: 2rem !important;
+                font-weight: 600;
+            }
+
+            .value {
+                .datepickerOpener {
+                    font-size: 1em;
+                }
+            }
+
+            .box {
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5% 2%;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
+                .checkAvailability {
+                    margin-top: 2%;
+                    width: 100% !important;
+
+                    .checkAvailabilityBtn {
+                        /* padding: 0; */
+                        padding: 3% 2.5%;
+                    }
+
+                    .whatsappLink {
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            .box>div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .roomsContainer {
+        flex-direction: column;
+        padding: 0% 4% 4% 4%;
+
+        .room {
+            width: 100%;
+            padding: 20% 0%;
+            margin-top: 6%;
+        }
+    }
+
+    .experiencesContainer {
+        display: flex;
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+
+            .aboutMoreBtn {
+                margin-bottom: 3%;
+            }
+        }
+
+        .right {
+            width: 100%;
+            padding: 33% 0%;
+        }
+    }
+
+    .testimonialContainer,
+    .reviewContainer {
+        padding-top: 10%;
+
+        .testimonialSingleSliderContainer {
+            padding: 2% 0% 0% 0%;
+            flex-direction: column;
+
+            .testimonial {
+                padding: 2% 2%;
+            }
+        }
+    }
+
+    .contactContainer {
+        flex-direction: column;
+
+        .map,
+        .addresses {
+            width: 100%;
+        }
+
+        .address {
+            width: 100%;
+            padding: 3% 5%;
+        }
+    }
+
+    .checkAvailabilityContainer {
+        box-shadow: none;
+        padding: 0px;
+        /* flex-wrap: wrap;
+        display: flex; */
+    }
+
+    .whatsApp {
+        font-size: 3rem;
+        padding: 2%;
+    }
+
+    .testimonialContainer .slick-track .testimonial {
+        height: 16dvh;
+        overflow-y: scroll;
+    }
+
+    .readMore {
+        /* width: 24% !important; */
+        padding: 3%;
+    }
+
+    .roomDetailsContainer {
+        flex-direction: column;
+        margin: 0% !important;
+        padding: var(--padding);
+        margin-top: 0% !important;
+        box-shadow: none !important;
+
+        .imageGallery {
+            width: 100% !important;
+        }
+
+        .roomDetails {
+            width: 100% !important;
+            box-shadow: none;
+
+            .roomName {
+                padding-top: 5%;
+            }
+
+            .description {
+                padding-top: 3% !important;
+
+            }
+        }
+    }
+
+    .mobilemenu {
+        position: fixed;
+        height: 100dvh;
+        background-color: black;
+        z-index: 1000;
+        color: white;
+        top: 0;
+        padding: 0;
+        justify-content: center !important;
+        flex-direction: column !important;
+        line-height: 5;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+
+        .MenuLinks {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .menuItem {
+            width: 100% !important;
+            /* font-size: 1.2rem !important; */
+            text-align: center;
+
+            .bookNow {
+                padding: 0% !important;
+                font-size: 0.7rem !important;
+                width: 90% !important;
+                margin: 0 auto;
+            }
+        }
+
+        .mobileMenuClose {
+            position: absolute;
+            top: 0%;
+            right: 11%;
+            font-size: 2rem;
+        }
+
+
+        /* justify-content: center !important;
+        align-items: center !important; */
+    }
+
+    .socialMediaContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .activityContainer {
+        flex-direction: column;
+        padding: 2% !important;
+
+        .activityItem {
+            width: 100% !important;
+            margin-bottom: 5% !important;
+        }
+    }
+
+    .footerContainer {
+        flex-direction: column;
+
+        .column1,
+        .column2,
+        .column3 {
+            width: 100% !important;
+        }
+    }
+
+    .floraImagesAndDescription,
+    .imageGallery {
+        flex-direction: column;
+    }
+
+    .birdsButterflyImages {
+        width: 100%;
+        height: 35dvh;
+    }
+
+    .headFlora {
+        font-size: 2rem;
+    }
+
+    .aboutBirdsAndButterflies,
+    .imageGalleryFlora .image {
+        width: 100%;
+    }
+
+
+    .natureImages {
+        height: 32dvh;
+
+    }
+
+    .imageGallery {
+        .image {
+            width: 100%;
+        }
+    }
+
+
+
+    .googleReviewNav {
+        bottom: 2%;
+    }
+
+    .reviewsContainer {
+        flex-direction: column;
+
+        #google-reviews,
+        .tripAdvisorReviews {
+            width: 100%;
+
+            .review-item {
+                width: 100%;
+                flex: auto;
+            }
+        }
+    }
+
+    .TA_selfserveprop>div {
+        margin: 3% auto !important;
+    }
+
+    .topBar {
+        height: 13dvh;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        /* padding-bottom: 2%; */
+
+        .socialMedia {
+            display: none;
+        }
+
+        .mail,
+        .phone {
+            width: 100%;
+            padding: 0% 0% 0% 5%;
+            justify-content: left;
+        }
+    }
+}
+
+.translateZero {
+    transform: translateX(0%);
+}

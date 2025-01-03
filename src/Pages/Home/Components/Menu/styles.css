@@ -1,0 +1,116 @@
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0; /* Change from left: 0 to right: 0 */
+  bottom: 0;
+  width: 300px;
+}
+
+.background {
+  position: absolute;
+  top: -5px;
+  right: 0; /* Change from left: 0 to right: 0 */
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+}
+
+.menu-button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 20.5px; /* Change from left: 28px to right: 28px */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.menu-ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  right: 25px; /* Align it on the right side */
+  width: 230px;
+  margin-bottom: 1px;
+}
+
+@media (max-width: 350px) {
+  .menu-ul {
+    padding: 15px; /* Adjust padding as needed */
+    top: 60px !important; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+    width: 180px; /* Adjust width as needed */
+  }
+}
+
+.menu-ul,
+.menu-li {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 260px;
+}
+
+.menu-li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  position: absolute;
+  /* background-color: #58BB44; */
+  border-radius: 4px;
+}
+.submenu-item {
+  padding: 8px 16px;
+  margin-top: 10px;
+  /* background-color: #3aa346; */
+  font-size: large;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+.menu-li {
+  margin-bottom: 10px;
+}

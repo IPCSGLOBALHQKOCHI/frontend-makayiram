@@ -1,0 +1,134 @@
+.blogContainer {
+    display: flex;
+    padding: var(--padding);
+    gap: 10px;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+
+    .blogCard {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        width: 32%;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .blogInfo {
+            padding: 3% 2%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            height: 253px;
+        }
+
+        .shortDescription {
+            color: gray;
+            font-size: 0.9rem;
+            font-weight: 300 !important;
+        }
+
+        .readMore {
+            width: max-content !important;
+            padding: 2% 4%;
+            border-radius: 4px;
+            font-size: medium;
+            font-weight: 400;
+            margin-top: 10%;
+            align-self: center;
+
+            /* position: absolute;
+            bottom: 5%; */
+        }
+    }
+}
+
+.blogDetailsContainer {
+    display: flex;
+    /* flex-direction: column; */
+    padding: var(--padding);
+    /* max-width: 75%; */
+    /* margin: 0 auto; */
+    /* justify-content: space-evenly; */
+    gap: 30px;
+    position: relative;
+    margin-bottom: 4%;
+
+    .selectedBlogInfo {
+        border-right: 1px solid rgb(196, 195, 195);
+        width: 70%;
+        gap: 20px;
+        padding: 0% 5%;
+
+        .createdAt {
+            color: gray;
+        }
+    }
+
+    .otherBlogs {
+        position: relative;
+        width: 30%;
+        /* 
+        .fixedContainer {
+            position: absolute;
+            left: 0;
+        } */
+        .fixedContainer {
+            position: sticky;
+            top: 30%;
+
+            svg {
+                color: green;
+            }
+        }
+
+        /* position: fixed;
+        right: ; */
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .blogHead {
+        padding: 5% 2%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (max-width: 990px) {
+
+    .otherReviews {
+        .otherReviewItem {
+            width: 98%;
+        }
+    }
+
+    .blogContainer .blogCard {
+        width: 100%;
+    }
+
+    .blogDetailsContainer {
+        flex-direction: column;
+
+        .selectedBlogInfo {
+            width: 100%;
+            padding: 0;
+            border: 0;
+        }
+    }
+
+    .fixedContainer {
+        padding: 15% 0%;
+    }
+}
