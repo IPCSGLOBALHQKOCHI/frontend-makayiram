@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../assets2/Logo.svg";
-import { FiArrowRight } from "react-icons/fi";
 import { FaAngleDown } from "react-icons/fa6";
 
 const Header: React.FC = () => {
@@ -110,7 +109,7 @@ export const roomsDropdown = [
   {
     text: (
       <span className="flex items-center">
-        Twin Rooms <FiArrowRight className=" ml-[44px]" />
+        Twin Rooms 
       </span>
     ),
     path: "https://makayiram.com/RoomDetails/DoubleRooms",
@@ -118,7 +117,7 @@ export const roomsDropdown = [
   {
     text: (
       <span className="flex items-center">
-        Aparments<FiArrowRight className="ml-20" />
+        Aparments
       </span>
     ),
     path: "https://makayiram.com/RoomDetails/apartments",
@@ -126,7 +125,7 @@ export const roomsDropdown = [
   {
     text: (
       <span className="flex items-center">
-        Suites <FiArrowRight className="ml-[88px]" />
+        Suites 
       </span>
     ),
     path: "https://makayiram.com/RoomDetails/Suites",
@@ -134,7 +133,7 @@ export const roomsDropdown = [
   {
     text: (
       <span className="flex items-center">
-        Cottages <FiArrowRight className="ml-[62px]" />
+        Cottages 
       </span>
     ),
     path: "https://makayiram.com/RoomDetails/cottages",

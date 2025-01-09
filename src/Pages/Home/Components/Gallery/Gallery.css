@@ -22,7 +22,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   .container {
     width: 85vw;
-    height: 88vh;
+    height: 95vh;
     top: 350px;
   }
 }
@@ -31,29 +31,29 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   .container {
     width: 96vw !important;
-    height: 90vh;
-    top: 550px;
+    height: 80vh;
+    top: 500px;
     margin-bottom: 200px !important;
     bottom: 200px !important;
   }
 }
 
 /* Large devices (e.g., desktops ≥992px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1269.98px) {
   .container {
     width: 90vw !important;
-    height: 80vh;
-    top: 650px;
+    height: 89vh;
+    top: 480px;
     box-shadow: 0 10px 10px 10px #dbdbdb;
   }
 }
 
 /* Extra large devices (e.g., large desktops ≥1200px) */
-@media (min-width: 1200px) and (max-width: 1535.98px) {
+@media (min-width: 1270px) and (max-width: 1535.98px) {
   .container {
     width: 96vw !important;
-    height: 85vh;
-    top: 400px;
+    height: 78vh;
+    top: 420px;
     box-shadow: 0 15px 10px rgba(242, 240, 240, 0.921);
 
   }

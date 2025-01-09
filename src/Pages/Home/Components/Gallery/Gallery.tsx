@@ -83,7 +83,7 @@ const Gallery: React.FC = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="content mt-40">
+            <div className="content mt-40 md:hidden lg:block">
               <div className="name">{slide.name}</div>
               <div className="des">{slide.description}</div>
               <button

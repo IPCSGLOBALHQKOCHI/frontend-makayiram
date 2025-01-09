@@ -1,7 +1,7 @@
 import { FaFacebook } from "react-icons/fa";
-import { TbBrandLinkedin } from "react-icons/tb";
-import { FaInstagram } from "react-icons/fa";
-import { FiYoutube } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
 import FooterLogo from "../../../assets2/footerlogo.png";
 import { IoIosMail } from "react-icons/io";
 import React from "react";
@@ -11,29 +11,28 @@ const Footer: React.FC = () => {
   return (
     
     <footer className="bg-[#006401] text-white p-6 pt-16">
- <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-8 gap-y-10">
-  {/* About Us Section */}
-  <div className="text-center md:text-start px-6 md:px-8 xl:ml-6">
-    <h5 className="text-3xl font-semibold my-5">About Us</h5>
+ <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10">
+  <div className="text-center md:text-start px-6 md:px-8 xl:ml-10">
+    <h5 className="text-3xl font-semibold my-5">Quick Links</h5>
     <ul className="mt-2 space-y-2">
-      <li>
-        <Link to="/mission" className="hover:underline font-extralight">
-          Mission
-        </Link>
-      </li>
-      <li>
-        <Link to="/vision" className="hover:underline font-extralight">
-          Vision
-        </Link>
-      </li>
-      <li>
+    <li>
         <Link to="https://makayiram.com/tariff" className="hover:underline font-extralight">
           Tariff
         </Link>
       </li>
       <li>
+        <Link to="https://makayiram.com/About" className="hover:underline font-extralight">
+          About Us
+        </Link>
+      </li>
+      <li>
         <Link to="https://makayiram.com/contact-us" className="hover:underline font-extralight">
           Contact Us
+        </Link>
+      </li>
+      <li>
+        <Link to="https://makayiram.com/flora&fauna" className="hover:underline font-extralight">
+        Flora & Fauna
         </Link>
       </li>
     </ul>
@@ -123,7 +122,7 @@ const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="text-white hover:text-gray-300"
       >
-        <FaFacebook style={{ width: "30px", height: "30px" }} />
+        <FaFacebook style={{ width: "30px", height: "28px" }} />
       </a>
       <a
         href="https://www.linkedin.com/company/makayiram-retreat/"
@@ -131,7 +130,7 @@ const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="text-white hover:text-gray-300"
       >
-        <TbBrandLinkedin style={{ width: "30px", height: "30px" }} />
+        <FaLinkedin style={{ width: "30px", height: "30px" }} />
       </a>
       <a
         href="https://www.instagram.com/makayiramretreat/#"
@@ -139,7 +138,7 @@ const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="text-white hover:text-gray-300"
       >
-        <FaInstagram style={{ width: "30px", height: "30px" }} />
+        <FaInstagramSquare style={{ width: "30px", height: "30px" }} />
       </a>
       <a
         href="https://www.youtube.com/@makayiramretreat"
@@ -147,7 +146,7 @@ const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="text-white hover:text-gray-300"
       >
-        <FiYoutube style={{ width: "30px", height: "30px" }} />
+        <IoLogoYoutube style={{ width: "30px", height: "35px" }} />
       </a>
     </span>
   </div>

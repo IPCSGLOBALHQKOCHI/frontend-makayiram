@@ -43,7 +43,7 @@ const Tariff = () => {
       </div>
       <div className="px-1 md:px-10 pb-10 text-center">
         <h1 className="my-5 font-bold text-lg md:text-3xl">
-          Per Night Tariff-2024-25
+          Per Night Tariff-2025-26
         </h1>
         <Table />
       </div>
