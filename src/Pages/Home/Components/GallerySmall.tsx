@@ -7,7 +7,7 @@ const GallerySlider: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -16,7 +16,7 @@ const GallerySlider: React.FC = () => {
     return [
       slides[currentIndex],
       slides[(currentIndex + 1) % slides.length],
-      slides[(currentIndex + 1) % slides.length],  
+      slides[(currentIndex + 2) % slides.length],  
     ];
   };
 
