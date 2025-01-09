@@ -14,7 +14,7 @@ const NearbyAttraction = () => {
           <div key={index} className="flex flex-col md:flex-row gap-10 px-5">
             <img src={card.img} alt="attraction" />
             <div className="flex justify-center items-center">
-            <h2 className="text-3xl font-normal text-justify leading-[1.5] sm:leading-loose">                <span className="text-[#006401] text-4xl md:text-4xl font-semibold">
+            <h2 className="text-3xl font-normal text-justify leading-normal sm:leading-loose">                <span className="text-[#006401] text-4xl md:text-4xl font-semibold">
                   {card.highlight}
                 </span>{" "}
                 – {card.description}
@@ -25,7 +25,7 @@ const NearbyAttraction = () => {
       </div>
       <div className="px-5 lg:px-16 space-y-10 mt-16">
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl xl:leading-loose sm:leading-relaxed font-normal text-justify">
+          <h2 className="text-3xl xl:leading-loose leading-normal font-normal text-justify">
             <span className="text-[#006401] text-4xl font-semibold">
               Nearest Airport:
             </span>{" "}
@@ -35,7 +35,7 @@ const NearbyAttraction = () => {
           </h2>
         </div>
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl xl:leading-loose sm:leading-relaxed  font-normal text-justify">
+          <h2 className="text-3xl xl:leading-loose leading-normal  font-normal text-justify">
             <span className="text-[#006401] text-4xl font-semibold">
               Nearest Railway Station:
             </span>{" "}

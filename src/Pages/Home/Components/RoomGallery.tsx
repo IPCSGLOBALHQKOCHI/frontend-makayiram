@@ -3,10 +3,13 @@ import React, { useState } from "react";
 // import Capricorn from "../../../assets2/Capricorn.png";
 // import Orion from "../../../assets2/Orion.png";
 // import Taurus from "../../../assets2/Taurus.png";
-const GeminiSuite="https://cms.makayiram.com/wp-content/uploads/2024/12/GeminiSuite.png"
-const Capricorn="https://cms.makayiram.com/wp-content/uploads/2024/12/Capricorn.png"
-const Orion="https://cms.makayiram.com/wp-content/uploads/2024/12/Orion.png"
-const Taurus="https://cms.makayiram.com/wp-content/uploads/2024/12/Taurus.png"
+const GeminiSuite =
+  "https://cms.makayiram.com/wp-content/uploads/2024/12/GeminiSuite.png";
+const Capricorn =
+  "https://cms.makayiram.com/wp-content/uploads/2024/12/Capricorn.png";
+const Orion = "https://cms.makayiram.com/wp-content/uploads/2024/12/Orion.png";
+const Taurus =
+  "https://cms.makayiram.com/wp-content/uploads/2024/12/Taurus.png";
 
 import TopRightRoomBlock from "../../../assets2/TopRightRoomBlock.png";
 import AnimatedSVG from "./AnimatedSVG";
@@ -106,25 +109,25 @@ const RoomGallery: React.FC = () => {
       imageUrl: GeminiSuite,
       label: "Twin Rooms",
       suiteName: "Gemini",
-      link: "",
+      link: "https://makayiram.com/RoomDetails/DoubleRooms",
     },
     {
       imageUrl: Capricorn,
       label: "Apartments",
       suiteName: "Capricorn",
-      link: "",
+      link: "https://makayiram.com/RoomDetails/apartments",
     },
     {
       imageUrl: Orion,
       label: "Suites",
       suiteName: "Orion",
-      link: "",
+      link: "https://makayiram.com/RoomDetails/Suites",
     },
     {
       imageUrl: Taurus,
       label: "Cottages",
       suiteName: "Taurus",
-      link: "",
+      link: "https://makayiram.com/RoomDetails/cottages",
     },
   ];
 
@@ -153,7 +156,7 @@ const RoomGallery: React.FC = () => {
                 className="rounded-t-lg object-contain w-full transform duration-300 ease-in"
               />
               <div className="absolute !-bottom-40 lg:!-bottom-20 xl:!-bottom-52 w-full flex justify-evenly space-x-10 xl:space-x-6 px-6 min-h-[200px] lg:min-h-[300px] xl:min-h-[450px]">
-                {rooms.map((room) => (                  
+                {rooms.map((room) => (
                   <RoomCard
                     key={room.label}
                     imageUrl={room.imageUrl}
@@ -168,40 +171,41 @@ const RoomGallery: React.FC = () => {
           </div>
           <div className="py-10 md:py-20 space-y-20 md:hidden">
             {rooms.map((room) => (
-                <a
+              <a
                 key={room.label}
                 href={room.link} // Use the link from the room object
                 rel="noopener noreferrer" // Prevent security vulnerabilities
               >
-              <RoomCardSmall
-                key={room.label}
-                imageUrl={room.imageUrl}
-                label={room.label}
-                suiteName={room.suiteName}
-                onClick={() => setSelectedRoom(room)}
-                selectedRoom={selectedRoom}
-              />
-                                 </a>
-
+                <RoomCardSmall
+                  key={room.label}
+                  imageUrl={room.imageUrl}
+                  label={room.label}
+                  suiteName={room.suiteName}
+                  onClick={() => setSelectedRoom(room)}
+                  selectedRoom={selectedRoom}
+                />
+              </a>
             ))}
           </div>
         </div>
       </div>
       <div className="flex justify-center">
-      <Button
-  label={
-    <span className="flex items-center group-hover:text-white">
-      Book Rooms
-      <FiArrowUpRight className="w-12 h-12 ml-10 text-[#302F2F] group-hover:text-white" />
-    </span>
-  }
-  type="button"
-  className="group border-2 border-[#302F2F] px-7 md:!px-10 py-2 mx-auto rounded-xl mt-16 hover:bg-darkGreen hover:border-darkGreen hover:text-white transition duration-1000 ease-in-out text-3xl md:text-4xl font-medium"
-  onClick={() => window.open(
-    "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=14a498c0a4dd4762b6e0f25352e40086&adult_1=null",
-    "_blank"
-  )}
- />
+        <Button
+          label={
+            <span className="flex items-center group-hover:text-white">
+              Book Rooms
+              <FiArrowUpRight className="w-12 h-12 ml-10 text-[#302F2F] group-hover:text-white" />
+            </span>
+          }
+          type="button"
+          className="group border-2 border-[#302F2F] px-7 md:!px-10 py-2 mx-auto rounded-xl mt-16 hover:bg-darkGreen hover:border-darkGreen hover:text-white transition duration-1000 ease-in-out text-3xl md:text-4xl font-medium"
+          onClick={() =>
+            window.open(
+              "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=14a498c0a4dd4762b6e0f25352e40086&adult_1=null",
+              "_blank"
+            )
+          }
+        />
       </div>
     </>
   );

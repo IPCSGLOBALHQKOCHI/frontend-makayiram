@@ -115,8 +115,8 @@ const Footer: React.FC = () => {
 <div className="flex flex-col md:flex-row items-center justify-between space-y-5 md:space-y-0">
   {/* Follow Us Section */}
   <div className="flex items-center space-x-5 mt-5 xl:mt-8 sm:mt-6 xl:ml-20">
-    <span>Follow us on</span>
-    <span className="flex items-center space-x-4">
+    <span className="mb-3">Follow us on</span>
+    <span className="flex items-center space-x-4 mb-4">
       <a
         href="https://www.facebook.com/makayiramretreat"
         target="_blank"
@@ -150,6 +150,10 @@ const Footer: React.FC = () => {
         <FiYoutube style={{ width: "30px", height: "30px" }} />
       </a>
     </span>
+  </div>
+
+  <div className="flex flex-col md:flex-row items-center justify-between space-y-5 md:space-y-0">
+<p className="text-[10px]">Powered by IPCS Technologies</p>
   </div>
 
   {/* Footer Links Section */}

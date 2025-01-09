@@ -34,15 +34,16 @@ export const Menu:React.FC = () => {
 
   return (
     <motion.nav
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-      custom={height}
-      ref={containerRef}
-      className="md:hidden z-50"
-    >
-      <motion.div className="background" variants={sidebar} />
-      <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
-    </motion.nav>
+    initial={false}
+    animate={isOpen ? "open" : "closed"}
+    custom={height}
+    ref={containerRef}
+    className={`md:hidden ${isOpen ? "z-50" : "z-10"}`}
+  >
+    <motion.div className="background" variants={sidebar} />
+    <Navigation />
+    <MenuToggle toggle={() => toggleOpen()} />
+  </motion.nav>
+  
   );
 };

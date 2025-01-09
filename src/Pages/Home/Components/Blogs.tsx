@@ -21,7 +21,7 @@ interface BlogCardComponentProps {
 const BlogCard: React.FC<BlogCardComponentProps> = ({ data, index }) => {
   return (
     <div
-      className={`max-w-md rounded-xl overflow-hidden shadow-lg border min-w-[350px] lg:min-w-[400px] w-full md:w-1/2 lg:w-1/3 ${
+      className={`max-w-md rounded-xl overflow-hidden shadow-lg border min-w-[300px] lg:min-w-[400px] w-full md:w-1/2 lg:w-1/3 ${
         index === 1 && "hidden xl:block bg-[#006401]"
       }`}
     >
@@ -69,7 +69,7 @@ const Blogs: React.FC = () => {
         Blogs
       </h1>
       <div 
-       className="flex flex-col md:flex-row items-center justify-between  text-2xl gap-10">
+       className="flex flex-col md:flex-row items-center justify-between mx-0 sm:mx-16 md:mx-16 lg:mx-40 xl:mx-0 text-2xl gap-10">
         {blogData.map((blog, index) => (
           <BlogCard key={index} data={blog} index={index} />
         ))}

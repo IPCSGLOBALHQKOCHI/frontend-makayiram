@@ -132,3 +132,30 @@
         padding: 15% 0%;
     }
 }
+
+@media screen and (max-width: 550px) {
+
+    .otherReviews {
+        .otherReviewItem {
+            width: 98%;
+        }
+    }
+
+    .blogContainer .blogCard {
+        width: 90%;
+    }
+
+     .blogDetailsContainer {
+        flex-direction: column;
+
+        .selectedBlogInfo {
+            width: 100%;
+            padding: 0;
+            border: 0;
+        }
+    }
+
+    .fixedContainer {
+        padding: 15% 0%;
+    } 
+}

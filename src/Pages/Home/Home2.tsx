@@ -1,10 +1,12 @@
 import Header from "./Components/Header";
-// import bgVideoLandscape from "../../assets2/bgvideo.mp4";
-// import bgVideoPortrait from "../../assets2/bgvideosmall.mp4";
-const bgVideoLandscape ="https://cms.makayiram.com/wp-content/uploads/2024/12/bgvideo.mp4"
-const bgVideoPortrait ="https://cms.makayiram.com/wp-content/uploads/2024/12/bgvideosmall.mp4"
+import bgVideoLandscape from "../../assets2/Makayiram Reel Website Horizontal.mp4";
+import bgVideoPortrait from "../../assets2/Makayiram Reel Website Vertical.mp4";
+// const bgVideoLandscape ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Reel-Website-Horizontal.mp4"
+// const bgVideoPortrait ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Reel-Website-Vertical.mp4"
 // import About_makayiram from "../../assets2/About_makayiram.png"; 
 const About_makayiram ="https://cms.makayiram.com/wp-content/uploads/2024/12/About_makayiram.png"
+import posterWeb from "../../../src/assets2/landscape thumbnail.jpg"
+import posterMobile from "../../../src/assets2/potrait thumbnail.jpg"
 import Button from "./Components/Button";
 import React from "react";
 import { Menu } from "./Components/Menu/Menu";
@@ -40,6 +42,7 @@ const Home2: React.FC = () => {
           muted
           preload="auto"
           playsInline
+          poster={posterWeb}
         >
           <source src={bgVideoLandscape} type="video/mp4" />
         </video>
@@ -49,6 +52,7 @@ const Home2: React.FC = () => {
           autoPlay
           loop
           muted
+          poster={posterMobile}
           preload="auto"
           playsInline
         >
@@ -58,7 +62,7 @@ const Home2: React.FC = () => {
         <Header />
         <Menu />
 
-        <div className="w-fit text-center text-white absolute xs:top-96 top-8/12 md:top-1/2 px-5 md:px-1">
+        <div className="w-fit text-center text-white absolute xs:top-96 top-8/12 md:top-1/2 px-5 md:px-1 z-40">
           <h1 className="xs:text-4xl text-5xl lg:text-6xl xl:text-7xl font-medium">
             Harmony With <span className="text-lightGreen">Nature</span>
           </h1>

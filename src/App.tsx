@@ -1,4 +1,4 @@
-  import { useState,useEffect } from "react";
+  // import { useState,useEffect } from "react";
   import { AllRoutes } from "./AllRoutes";
   import "./App.css";
   import { Footer } from "./Components/Footer/Footer";
