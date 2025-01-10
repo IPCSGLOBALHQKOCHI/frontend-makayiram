@@ -92,18 +92,6 @@ export const menuItems = [
   { text: "Contact Us", path: "https://makayiram.com/contact-us", color: "#1E8C45" },
 ];
 
-
-// Menu items array
-// export const menuItemsss = [
-//   { text: "About Us", path: "https://makayiram.com/About", color: "#78D23D" },
-//   { text: "Activities", path: "https://makayiram.com/activities", color: "#58BB44" },
-//   { text: "Flora & Fauna", path: "https://makayiram.com/flora&fauna", color: "#3AA346" },
-//   { text: "Gallery", path: "/gallery", color: "#1E8C45" },
-//   { text: "Rooms ", path: "", color: "#007541"},
-// ];
-
-// test comments
-
 // Dropdown items for Rooms
 export const roomsDropdown = [
   {

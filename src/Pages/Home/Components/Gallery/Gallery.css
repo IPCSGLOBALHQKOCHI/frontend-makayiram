@@ -31,10 +31,11 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   .container {
     width: 96vw !important;
-    height: 80vh;
-    top: 500px;
-    margin-bottom: 200px !important;
-    bottom: 200px !important;
+    height: 75vh;
+    top: 250px;
+    margin-top: 230px !important
+    /* margin-bottom: 200px !important; */
+    /* bottom: 200px !important; */
   }
 }
 
@@ -43,7 +44,7 @@
   .container {
     width: 90vw !important;
     height: 89vh;
-    top: 480px;
+    top: 360px;
     box-shadow: 0 10px 10px 10px #dbdbdb;
   }
 }
@@ -52,10 +53,10 @@
 @media (min-width: 1270px) and (max-width: 1535.98px) {
   .container {
     width: 96vw !important;
-    height: 78vh;
-    top: 420px;
+    height: 90vh;
+    top: 300px;
     box-shadow: 0 15px 10px rgba(242, 240, 240, 0.921);
-
+margin-top: 100px !important
   }
 }
 

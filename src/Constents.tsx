@@ -258,7 +258,7 @@ export const API = (
 export const menuDetails = [
   { menu: "Home", to: "/", order: 1 },
   { menu: "About", to: "/About", order: 2 },
-  { menu: "Rooms", to: "/#rooms", order: 3 },
+  { menu: "Rooms", to: "", order: 3 },
   { menu: "Activities", to: "/activities", order: 4 },
   { menu: "Blogs", to: "/Blogs", order: 5 },
   { menu: "Flora & Fauna", to: "/flora&fauna", order: 6 },
@@ -276,6 +276,40 @@ export const menuDetails = [
   // { menu: "logo", to: "", img: "logo.jpg" },
   // { menu: "Rates & Reservation", to: "" },
 ];
+
+export const roomsDropdown = [
+  {
+    text: (
+      <span className="flex items-center text-xl font-semibold">
+        Twin Rooms 
+      </span>
+    ),
+    path: "https://makayiram.com/RoomDetails/DoubleRooms",
+  },
+  {
+    text: (
+      <span className="flex items-center text-xl font-semibold">
+        Aparments
+      </span>
+    ),
+    path: "https://makayiram.com/RoomDetails/apartments",
+  }, 
+  {
+    text: (
+      <span className="flex items-center text-xl font-semibold">
+        Suites 
+      </span>
+    ),
+    path: "https://makayiram.com/RoomDetails/Suites",
+  },
+  {
+    text: (
+      <span className="flex items-center text-xl font-semibold">
+        Cottages 
+      </span>
+    ),
+    path: "https://makayiram.com/RoomDetails/cottages",
+  },];
 
 export const aboutMakayiram = (
   <>
