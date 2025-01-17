@@ -86,13 +86,13 @@ const Gallery: React.FC = () => {
             <div className="content mt-40 md:hidden lg:block">
               <div className="name">{slide.name}</div>
               <div className="des">{slide.description}</div>
-              <button
+              {/* <button
                 className="button flex items-center border-2 border-white px-7 md:!px-8 py-3 w-fit rounded-xl text-white hover:bg-white hover:text-darkGreen transition duration-1000 ease-in-out text-3xl md:text-4xl font-medium"
                 onClick={() => alert("Explore More!")}
               >
                 Explore More
                 <FiArrowUpRight className="w-12 h-12 ml-12 group-hover:text-darkGreen" />
-              </button>
+              </button> */}
             </div>
           </div>
         ))}

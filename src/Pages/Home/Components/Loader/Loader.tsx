@@ -1,17 +1,17 @@
 import { FC } from "react";
-import "./Loader.css"
+import logoAnimation from "../../../../../src/assets2/ANIMATION MAKAYIRAM WHITE.mp4"
 
-// Define the Loader component as a Functional Component (FC)
 const Loader: FC = () => {
   return (
-      <div className="newtons-cradle">
-        <div className="newtons-cradle__dot" />
-        <div className="newtons-cradle__dot" />
-        <div className="newtons-cradle__dot" />
-        <div className="newtons-cradle__dot" />
-      </div>
+    <div className="loader-container flex justify-center items-center h-screen">
+      <video
+        src={logoAnimation}
+        autoPlay
+        muted
+        className="w-full max-w-md"
+      />
+    </div>
   );
 };
-
 
 export default Loader;

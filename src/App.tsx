@@ -1,4 +1,4 @@
-  // import { useState,useEffect } from "react";
+  import { useState,useEffect } from "react";
   import { AllRoutes } from "./AllRoutes";
   import "./App.css";
   import { Footer } from "./Components/Footer/Footer";
@@ -7,33 +7,33 @@
   import { Toaster } from "react-hot-toast";
   import { useLocation } from "react-router-dom";
   import whatsapp from "../src/assets2/573b1115-821f-4cd1-8012-e16c061439c2.jpg";
-  // import Loader from "./Pages/Home/Components/Loader/Loader.tsx"
+  import Loader from "./Pages/Home/Components/Loader/Loader.tsx"
 
   function App() {
     const location = useLocation();
 
     // Check if the current route is home page
     const isHomePage = location.pathname === "/";
-      // const [loading, setLoading] = useState(true);
+      const [loading, setLoading] = useState(true);
 
-      // useEffect(() => {
-      //   const timer = setTimeout(() => {
-      //     setLoading(false);
-      //   }, 2000);
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 6000);
     
-      //   return () => clearTimeout(timer);
-      // }, []);
+        return () => clearTimeout(timer);
+      }, []);
     
-      // if (loading) {
-      //   return (
-      //     <div className="flex items-center justify-center h-screen bg-gray-100">
-      //       <div className="text-center">
-      //         <h3 className="text-3xl font-semibold flex flex-col justify-center items-center ">Loading...!</h3>
-      //         <div className="loader"></div> {<Loader/>}
-      //       </div>
-      //     </div>
-      //   );
-      // }
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center h-screen bg-white">
+            {/* <div className="text-center"> */}
+              {/* <h3 className="text-3xl font-semibold flex flex-col justify-center items-center ">Loading...!</h3> */}
+              <div className="loader"></div> {<Loader/>}
+            {/* </div> */}
+          </div>
+        );
+      }
 
     return (
       <>

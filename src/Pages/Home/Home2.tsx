@@ -1,12 +1,13 @@
+import { useEffect,useRef } from "react";
 import Header from "./Components/Header";
-import bgVideoLandscape from "../../assets2/Makayiram Reel Website Horizontal.mp4";
-import bgVideoPortrait from "../../assets2/Makayiram Reel Website Vertical.mp4";
+import bgVideoLandscape from "../../assets2/Makayiram Horizontal.mp4";
+import bgVideoPortrait from "../../assets2/Makayiram Vertical.mp4";
 // const bgVideoLandscape ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Reel-Website-Horizontal.mp4"
 // const bgVideoPortrait ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Reel-Website-Vertical.mp4"
 // import About_makayiram from "../../assets2/About_makayiram.png"; 
 const About_makayiram ="https://cms.makayiram.com/wp-content/uploads/2024/12/About_makayiram.png"
-import posterWeb from "../../../src/assets2/landscape thumbnail.jpg"
-import posterMobile from "../../../src/assets2/potrait thumbnail.jpg"
+import posterWeb from "../../../src/assets2/Thumbnail Horizontal.jpg"
+import posterMobile from "../../../src/assets2/Thumbnail Vertical.jpg"
 import Button from "./Components/Button";
 import React from "react";
 import { Menu } from "./Components/Menu/Menu";
@@ -32,10 +33,21 @@ const style: CustomCSSProperties = {
 };
 
 const Home2: React.FC = () => {
+  const landscapeVideoRef = useRef<HTMLVideoElement>(null);
+  const portraitVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (window.innerWidth >= 768 && landscapeVideoRef.current) {
+      landscapeVideoRef.current.play();
+    } else if (window.innerWidth < 768 && portraitVideoRef.current) {
+      portraitVideoRef.current.play();
+    }
+  }, []);
   return (
     <div className="w-full relative flex flex-col font-initial font-pops">
       <div className="w-full min-h-screen flex flex-col justify-center items-center relative font-pops">
         <video
+        ref={landscapeVideoRef}
           className="absolute top-0 left-0 w-full h-full object-cover hidden md:block" // Hidden on small screens
           autoPlay
           loop
@@ -48,6 +60,7 @@ const Home2: React.FC = () => {
         </video>
 
         <video
+        ref={portraitVideoRef}
           className="absolute top-0 left-0 w-full max-h-full object-cover -z-10 block md:hidden" // Block on small screens, hidden on md and above
           autoPlay
           loop
