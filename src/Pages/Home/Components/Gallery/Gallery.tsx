@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from "react";
 // import gallery4 from "../../../../assets2/gallery4.png";
 // import gallery5 from "../../../../assets2/image.png";
 import "./Gallery.css";
-import { FiArrowUpRight } from "react-icons/fi";
+// import { FiArrowUpRight } from "react-icons/fi";
 const gallery1="https://cms.makayiram.com/wp-content/uploads/2024/12/gallery1.png"
 const gallery2="https://cms.makayiram.com/wp-content/uploads/2024/12/gallery2.png"
 const gallery3="https://cms.makayiram.com/wp-content/uploads/2024/12/gallery3.png"

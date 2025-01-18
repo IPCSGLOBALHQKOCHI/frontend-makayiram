@@ -11,8 +11,6 @@
 
   function App() {
     const location = useLocation();
-
-    // Check if the current route is home page
     const isHomePage = location.pathname === "/";
       const [loading, setLoading] = useState(true);
 
@@ -24,7 +22,7 @@
         return () => clearTimeout(timer);
       }, []);
     
-      if (loading) {
+      if (loading && isHomePage) {
         return (
           <div className="flex items-center justify-center h-screen bg-white">
             {/* <div className="text-center"> */}

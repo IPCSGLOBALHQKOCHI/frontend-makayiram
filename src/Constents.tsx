@@ -258,7 +258,7 @@ export const API = (
 export const menuDetails = [
   { menu: "Home", to: "/", order: 1 },
   { menu: "About", to: "/About", order: 2 },
-  { menu: "Rooms", to: "", order: 3 },
+  { menu: "Rooms", to: "#", order: 3 },
   { menu: "Activities", to: "/activities", order: 4 },
   { menu: "Blogs", to: "/Blogs", order: 5 },
   { menu: "Flora & Fauna", to: "/flora&fauna", order: 6 },
@@ -276,6 +276,29 @@ export const menuDetails = [
   // { menu: "logo", to: "", img: "logo.jpg" },
   // { menu: "Rates & Reservation", to: "" },
 ];
+
+export const menuDetailsFooter = [
+  { menu: "Home", to: "/", order: 1 },
+  { menu: "About", to: "/About", order: 2 },
+  // { menu: "Rooms", to: "", order: 3 },
+  { menu: "Activities", to: "/activities", order: 4 },
+  { menu: "Blogs", to: "/Blogs", order: 5 },
+  { menu: "Flora & Fauna", to: "/flora&fauna", order: 6 },
+
+  // { menu: "Flora & Fauna", to: "/activities", order: 4 },
+  // { menu: "Contact", to: "/#contact", order: 5 },
+  {
+    menu: "Book now",
+    to: "bookNow",
+    externalLink:
+      "https://bookings.resavenue.com/resBooking/availsearch?regCode=VXIA1026",
+    order: 7,
+  },
+  // { menu: "Book now", to: "bookNow", externalLink: "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=211c3a15b7e54424a665f96dd648aa7d", order: 7 }
+  // { menu: "logo", to: "", img: "logo.jpg" },
+  // { menu: "Rates & Reservation", to: "" },
+];
+
 
 export const roomsDropdown = [
   {

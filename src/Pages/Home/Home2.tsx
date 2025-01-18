@@ -1,9 +1,9 @@
-import { useEffect,useRef } from "react";
+import { useEffect,useRef,useState } from "react";
 import Header from "./Components/Header";
 import bgVideoLandscape from "../../assets2/Makayiram Horizontal.mp4";
 import bgVideoPortrait from "../../assets2/Makayiram Vertical.mp4";
-// const bgVideoLandscape ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Reel-Website-Horizontal.mp4"
-// const bgVideoPortrait ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Reel-Website-Vertical.mp4"
+// const bgVideoLandscape ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Horizontal.mp4"
+// const bgVideoPortrait ="https://cms.makayiram.com/wp-content/uploads/2025/01/Makayiram-Vertical.mp4"
 // import About_makayiram from "../../assets2/About_makayiram.png"; 
 const About_makayiram ="https://cms.makayiram.com/wp-content/uploads/2024/12/About_makayiram.png"
 import posterWeb from "../../../src/assets2/Thumbnail Horizontal.jpg"
@@ -35,14 +35,52 @@ const style: CustomCSSProperties = {
 const Home2: React.FC = () => {
   const landscapeVideoRef = useRef<HTMLVideoElement>(null);
   const portraitVideoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth >= 768 && landscapeVideoRef.current) {
-      landscapeVideoRef.current.play();
-    } else if (window.innerWidth < 768 && portraitVideoRef.current) {
-      portraitVideoRef.current.play();
+    const handleVideoLoad = () => {
+      setIsVideoLoaded(true);
+    };
+  
+    if (landscapeVideoRef.current) {
+      landscapeVideoRef.current.load(); 
+      landscapeVideoRef.current.addEventListener('loadeddata', handleVideoLoad);
     }
+    if (portraitVideoRef.current) {
+      portraitVideoRef.current.load(); 
+      portraitVideoRef.current.addEventListener('loadeddata', handleVideoLoad);
+    }
+  
+    return () => {
+      if (landscapeVideoRef.current) {
+        landscapeVideoRef.current.removeEventListener('loadeddata', handleVideoLoad);
+      }
+      if (portraitVideoRef.current) {
+        portraitVideoRef.current.removeEventListener('loadeddata', handleVideoLoad);
+      }
+    };
   }, []);
+  
+  useEffect(() => {
+    const playVideo = () => {
+      if (isVideoLoaded) { 
+        if (window.innerWidth >= 768 && landscapeVideoRef.current) {
+          landscapeVideoRef.current.play();
+        } else if (window.innerWidth < 768 && portraitVideoRef.current) {
+          portraitVideoRef.current.play();
+        }
+      }
+    };
+  
+    const timer = setTimeout(playVideo, 6000);
+  
+    window.addEventListener("resize", playVideo);
+  
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", playVideo);
+    };
+  }, [isVideoLoaded]);
   return (
     <div className="w-full relative flex flex-col font-initial font-pops">
       <div className="w-full min-h-screen flex flex-col justify-center items-center relative font-pops">

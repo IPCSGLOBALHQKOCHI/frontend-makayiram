@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
 
       <div className="flex flex-col md:flex-row items-center justify-between space-y-5 md:space-y-0">
         {/* Follow Us Section */}
-        <div className="flex items-center space-x-5 mt-5 xl:mt-8 sm:mt-6 ml-20">
+        <div className="flex items-center space-x-5 mt-5 xl:mt-8 sm:mt-6 sm:ml-24 ml-0">
           <span className="mb-3">Follow us on</span>
           <span className="flex items-center space-x-4 mb-4">
             <a
@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaFacebook style={{ width: "30px", height: "28px" }} />
+              <FaFacebook className="w-8 h-7 sm:w-11 sm:h-11" />
             </a>
             <a
               href="https://www.linkedin.com/company/makayiram-retreat/"
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaLinkedin style={{ width: "30px", height: "30px" }} />
+              <FaLinkedin className="w-8 h-7 sm:w-11 sm:h-11" />
             </a>
             <a
               href="https://www.instagram.com/makayiramretreat/#"
@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaInstagramSquare style={{ width: "30px", height: "30px" }} />
+              <FaInstagramSquare className="w-8 h-7 sm:w-11 sm:h-11" />
             </a>
             <a
               href="https://www.youtube.com/@makayiramretreat"
@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <IoLogoYoutube style={{ width: "30px", height: "35px" }} />
+              <IoLogoYoutube className="w-8 h-7 sm:w-11 sm:h-11" />
             </a>
           </span>
         </div>

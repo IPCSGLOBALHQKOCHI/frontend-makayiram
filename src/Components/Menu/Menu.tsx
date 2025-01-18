@@ -39,7 +39,7 @@ export const SocialMediaMenu = () => {
         </div>
     )
 }
-const BookNowButton = ({ order }: any) => {
+export const BookNowButton = ({ order }: any) => {
     console.log(order);
     
     var tomorrow = new Date();
@@ -63,7 +63,7 @@ export const MenuLinks = (props: any) => {
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const scrollWithOffset = (el: any) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-        const yOffset = -100; // Adjust this offset as needed
+        const yOffset = -100;
         window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
     }
 
@@ -85,7 +85,8 @@ export const MenuLinks = (props: any) => {
           clearTimeout(timeoutRef.current);
         }
       };
-    return (   <div className="MenuLinks text-center md:text-left">
+    return (
+      <div className="MenuLinks text-center md:text-left">
         {menuDetails.map((menu) => {
           if (menu.externalLink) {
             return <BookNowButton order={menu.order} />;
@@ -105,8 +106,8 @@ export const MenuLinks = (props: any) => {
                   to={menu.to}
                 >
                   <div
-                    onClick={() => props.handleMobileMenu(false)}
-                    className="menuItem"
+                    onClick={showDropdown} 
+                    className="menuItem cursor-pointer"
                   >
                     {menu.menu}
                   </div>
@@ -114,8 +115,8 @@ export const MenuLinks = (props: any) => {
                 {isDropdownVisible && (
                   <div
                     className="absolute left-0 mt-2 bg-white border shadow-lg rounded-md z-10"
-                    onMouseEnter={cancelHideDropdown} // Prevent hiding when mouse is on dropdown
-                    onMouseLeave={hideDropdown} // Start hiding countdown when leaving dropdown
+                    onMouseEnter={cancelHideDropdown}
+                    onMouseLeave={hideDropdown}
                   >
                     {roomsDropdown.map((room, index) => (
                       <a
@@ -135,13 +136,16 @@ export const MenuLinks = (props: any) => {
           } else {
             return (
               <NavHashLink
-                scroll={(el) => scrollWithOffset(el)}
-                key={menu.menu}
-                style={{ order: menu.order }}
-                className="menuItem"
-                smooth
-                to={menu.to}
-              >
+              scroll={(el) => scrollWithOffset(el)}
+              style={{ order: menu.order }}
+              className="menuItem"
+              smooth
+              to={menu.to}
+              onClick={(e) => {
+                if (menu.menu === "Rooms") e.preventDefault();
+                showDropdown(); 
+              }}
+            >
                 <div
                   onClick={() => props.handleMobileMenu(false)}
                   className="menuItem"
@@ -154,7 +158,7 @@ export const MenuLinks = (props: any) => {
         })}
         {props.children}
       </div>
-    )
+    );
 }
 
 
